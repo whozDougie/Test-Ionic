@@ -1,0 +1,37 @@
+﻿
+
+<div class="row">
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+    <div class="col-md-8">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Complete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="activity in activities">
+                <td>
+                    {{ goal.goalID }}
+                </td>
+                <td>
+                    {{ goal.Title }}
+                </td>
+                <td>
+                    <input type="checkbox" data-ng-model="goal.isComplete" disabled="disabled">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+</div>
+
+ 
