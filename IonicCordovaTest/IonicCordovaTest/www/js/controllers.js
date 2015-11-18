@@ -2,8 +2,6 @@
  
 angular.module('starter.controllers', ['ionic'])
 
-//.controller('DashCtrl', function($scope) {})
-//
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
@@ -15,7 +13,19 @@ angular.module('starter.controllers', ['ionic'])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('GoalDetailCtrl', function ($scope) {
+    $scope.openGoalDetailModal = function () {
+        // console.log('Show Modal');
+        $scope.modal.show();
+    };
+    $scope.closeGoalDetailModal = function () {
+        $scope.modal.hide();
+    };
+})
+
+
+
+.controller('ProfileCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
   };
